@@ -1,0 +1,154 @@
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 930px;
+  background-color: #F6F6F6;
+  font-family: 'Handlee', arial;
+  letter-spacing: 1px;
+  flex-grow: 1;
+  display: flex; /* equal height of the children */
+}
+
+.pages {
+  flex-grow: 1;
+  display: flex; /* equal height of the children */
+}
+
+.book {
+  margin-top: 60px;
+  display: flex; /* equal height of the children */
+  flex-direction: column;
+}
+
+.top-tabs {  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left-tabs {  
+}
+
+.left-tabs .tab-label {  
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+}
+
+.left-tabs .tab {  
+  width: 40px;
+  height: 100px;
+  border-radius: 0px 10px 10px 0px;
+  margin-top: 10px;
+}
+
+.top-tabs .tab {  
+  height: 36px;
+  width: 100px;
+  border-radius: 10px 10px 0px 0px;
+  margin-left: 10px;  
+  margin-right: 10px;  
+}
+
+.tab {  
+  display: flex;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* no underline */
+  -webkit-box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  -moz-box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  font-size: 16px;
+}
+
+.green-tab {
+  background-color: #A6D294;
+  color: darkgreen;
+}
+
+.brown-tab {
+  background-color: #E4D4C8;
+  color: #523A28;
+}
+
+.blue-tab {
+  background-color: #d9effd;
+  color: #0b76b8;
+}
+
+.orange-tab {
+  background-color: #FFC966;
+  color: #7f570d;
+}
+
+.tab-label {  
+  flex: 1;
+  text-align: center;
+  font-weight: 900;
+}
+
+.page {
+  z-index: 1;
+  flex: 1; /* additionally, equal width */  
+  -webkit-box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  -moz-box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  box-shadow: 0px 0px 20px -6px rgba(150,150,150,.5);
+  border-color: gray;
+  border-width: 1px;
+  background-image: url(left-page.png), url(right-page.png);
+  background-repeat: repeat-y, repeat;
+  background-position: left top, right top;
+  padding-left: 100px;
+  padding-right: 50px;
+  padding-top: 21px;
+  margin: 0px;
+  color: black;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+.left-tabs {
+  display: block;
+}
+.top-tabs {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .page {
+    background-image: url(right-page.png);
+    background-repeat: repeat;
+    background-position: right top;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: -21px;
+    margin: 0px;
+    color: black;
+    line-height: 60px;
+    font-size: 18px;
+  }
+  .date {
+    display: none;
+  }
+  .left-tabs {
+    display: none;
+  }
+  .top-tabs {
+    display: flex;
+  }
+  
+  .book {
+    margin-top: 10px;
+  }
+}
+
+.date, .twitter {
+  text-align: right;
+}
+
+a {
+  color: darkblue;
+}
